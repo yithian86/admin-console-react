@@ -1,0 +1,28 @@
+.AcTable {
+  text-wrap: nowrap;
+  border-collapse: collapse;
+  background-color: var(--neutral-lowest);
+  
+  thead {
+    tr {
+      border-bottom: 2px solid var(--secondary-base);
+    }
+
+    th {
+      padding: 4px 8px;
+      font-size: 16px;
+    }
+  }
+
+  tbody {
+    tr {
+      border-bottom: 1px solid var(--neutral-low);
+    }
+
+    td {
+      text-align: center;
+      font-size: 12px;
+      padding: 8px;
+    }
+  }
+}
