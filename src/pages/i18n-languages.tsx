@@ -1,7 +1,7 @@
 // React imports
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 // Ant Design imports
-import { Radio, RadioChangeEvent, Switch } from 'antd';
+import { Radio, RadioChangeEvent, Skeleton, Switch } from 'antd';
 // App imports
 import { I18nService, I18nTypes } from '../services/ac-services.index';
 import '../ac-theme/pages/i18n-languages.scss';
@@ -9,12 +9,14 @@ import '../ac-theme/pages/i18n-languages.scss';
 
 export default function Languages() {
   const [languages, setLanguages] = useState([]);
+  const isReady = useRef(false);
 
 
   useEffect(() => {
     I18nService.fetchLanguages()
       .then(response => {
         setLanguages(response.data);
+        isReady.current = true;
       })
       .catch(error => {
         console.error(error);
@@ -61,7 +63,7 @@ export default function Languages() {
     <div className='Languages'>
       <h2>App languages</h2>
 
-      {/* Languages table */}
+      {/* LANGUAGES TABLE */}
       <div className='Languages__tableWrapper'>
         <table className='AcTable'>
           <thead>
@@ -75,7 +77,8 @@ export default function Languages() {
             </tr>
           </thead>
           <tbody>
-            {languages?.map((language: I18nTypes.ILanguage, index: number) => (
+            {/* TABLE DATA */}
+            {isReady.current && languages?.map((language: I18nTypes.ILanguage, index: number) => (
               <tr key={index}>
                 {/* Enabled */}
                 <td><Switch checked={language.enabled} onChange={(checked) => onChangeEnabled(checked, language)} /></td>
@@ -96,6 +99,18 @@ export default function Languages() {
                 <td>{language.direction}</td>
               </tr>
             ))}
+
+            {/* SKELETON (loading phase) */}
+            {!isReady.current &&
+              <tr>
+                <td><Skeleton active paragraph={{ rows: 5 }}/></td>
+                <td><Skeleton active paragraph={{ rows: 5 }}/></td>
+                <td><Skeleton active paragraph={{ rows: 5 }}/></td>
+                <td><Skeleton active paragraph={{ rows: 5 }}/></td>
+                <td><Skeleton active paragraph={{ rows: 5 }}/></td>
+                <td><Skeleton active paragraph={{ rows: 5 }}/></td>
+              </tr>
+            }
           </tbody>
         </table>
       </div>

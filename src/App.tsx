@@ -18,11 +18,7 @@ export default function App() {
   // Hook from react-router-dom to get current path
   const location = useLocation();
   // State to manage the current route
-  const getCurrentLocation = () => {
-    console.debug(location.pathname);
-    return location.pathname;
-  }
-  const [currentRoute, setCurrentRoute] = useState(getCurrentLocation());
+  const [currentRoute, setCurrentRoute] = useState(location.pathname);
   // State to manage the theme of the menu
   const [menuTheme, setMenuTheme] = useState<MenuTheme>('dark');
   // State to manage the collapse of the menu
@@ -38,6 +34,7 @@ export default function App() {
   };
 
   const onClick: MenuProps['onClick'] = (e) => {
+    console.debug(`ADMIN-CONSOLE ::: Navigating to ${e.key}`);
     setCurrentRoute(e.key);
   };
 
