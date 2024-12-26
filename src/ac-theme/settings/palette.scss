@@ -1,12 +1,12 @@
 :root {
   /* Primary Colors */
-  --primary-darkest: color-mix(in srgb, var(--secondary-base), #000 80%);       /* Deep, muted blue */
-  --primary-darker: color-mix(in srgb, var(--secondary-base), #000 60%);        /* Darker blue for depth */
-  --primary-dark: color-mix(in srgb, var(--secondary-base), #000 40%);          /* Darker blue for depth */
-  --primary-base: #357ABD;                                                      /* Base blue for the palette */
-  --primary-light: color-mix(in srgb, var(--secondary-base), #FFF 40%);         /* Brighter blue for highlights */
-  --primary-lighter: color-mix(in srgb, var(--secondary-base), #FFF 60%);       /* Brighter blue for highlights */
-  --primary-lightest: color-mix(in srgb, var(--secondary-base), #FFF 80%);      /* Light pastel blue */
+  --primary-darkest: color-mix(in srgb, var(--primary-base), #000 80%);       /* Deep, muted blue */
+  --primary-darker: color-mix(in srgb, var(--primary-base), #000 60%);        /* Darker blue for depth */
+  --primary-dark: color-mix(in srgb, var(--primary-base), #000 40%);          /* Darker blue for depth */
+  --primary-base: #488cd1;                                                      /* Base blue for the palette */
+  --primary-light: color-mix(in srgb, var(--primary-base), #FFF 40%);         /* Brighter blue for highlights */
+  --primary-lighter: color-mix(in srgb, var(--primary-base), #FFF 60%);       /* Brighter blue for highlights */
+  --primary-lightest: color-mix(in srgb, var(--primary-base), #FFF 80%);      /* Light pastel blue */
   
   /* Secondary Colors */  
   --secondary-darkest: color-mix(in srgb, var(--secondary-base), #000 80%);     /* Deep, muted green */
