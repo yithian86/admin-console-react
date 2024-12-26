@@ -22,9 +22,29 @@
     }
 
     td {
-      text-align: center;
       font-size: 12px;
       padding: 8px;
     }
+  }
+
+  .sticky-col {
+    position: sticky;
+    /* Keep it fixed to the left */
+    left: 0;
+    /* Optional: add a background to the fixed column */
+    background: var(--neutral-light);
+     /* Ensure it appears above scrolling content */
+    z-index: 1;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0; /* Positioned at the right edge of the sticky column */
+      width: 1px;
+      height: 100%;
+      background: var(--neutral-medium); /* Border color */
+      pointer-events: none; /* Ensure it doesn't block interactions */
+  }
   }
 }
