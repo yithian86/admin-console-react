@@ -1,18 +1,23 @@
 :root {
   /* Primary Colors */
-  --primary-high: #2980b9; /* Dark Blue */
-  --primary-base: #3498db; /* Blue */
-  --primary-low: #85c1e9; /* Light Blue */
+  --primary-darkest: #1B3D63;    /* Deep, muted blue */
+  --primary-dark: #285F91;    /* Darker blue for depth */
+  --primary-base: #357ABD;    /* Base blue for the palette */
+  --primary-light: #4A9FEF;     /* Brighter blue for highlights */
+  --primary-lightest: #B3D4F5;   /* Light pastel blue */
 
   /* Secondary Colors */
-  --secondary-high: #c0392b; /* Dark Red */
-  --secondary-base: #e74c3c; /* Red */
-  --secondary-low: #f1948a; /* Light Red */
+  --secondary-darkest: #1D4733;  /* Deep, muted green */
+  --secondary-dark: #2F6D4E;   /* Darker green for depth */
+  --secondary-base: #4C9F70;  /* Base green for the palette */
+  --secondary-light: #62B88D;  /* Brighter green for highlights */
+  --secondary-lightest: #A4D9B6; /* Light pastel green */
 
   /* Neutral Palette */
-  --neutral-highest: #000000; /* Black */
-  --neutral-high: #2c3e50; /* Dark Gray */
-  --neutral-medium: #bdc3c7; /* Medium Gray */
-  --neutral-low: #f4f4f4; /* Light Gray */
-  --neutral-lowest: #ffffff; /* White */
+  --neutral-darkest: #262626; /* Black */
+  --neutral-darker: #595959;  /* Dark Gray */
+  --neutral-dark: #A6A6A6;    /* Dark Gray */
+  --neutral-medium: #D9D9D9;  /* Medium Gray */
+  --neutral-light: #F5F5F5;     /* Light Gray */
+  --neutral-lightest: #FFFFFF;  /* White */
 }

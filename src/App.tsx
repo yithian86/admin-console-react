@@ -7,11 +7,11 @@ import { Button, Menu, Switch } from 'antd';
 import { AlipayOutlined, DashboardOutlined } from '@ant-design/icons';
 // App imports
 import './App.css'
-import Languages from './pages/languages'
+import Languages from './pages/i18n-languages'
 import Dashboard from './pages/dashboard'
-import Globalization from './pages/globalization';
-import Labels from './pages/labels';
-import ImportExport from './pages/import-export';
+import Globalization from './pages/i18n-globalization';
+import Labels from './pages/i18n-labels-manager';
+import ImportExport from './pages/i18n-import-export';
 
 
 export default function App() {

@@ -1,7 +1,8 @@
 .AcTable {
+  width: 100%;
   text-wrap: nowrap;
   border-collapse: collapse;
-  background-color: var(--neutral-lowest);
+  background-color: var(--neutral-lightest);
   
   thead {
     tr {
@@ -10,13 +11,14 @@
 
     th {
       padding: 4px 8px;
-      font-size: 16px;
+      font-size: 14px;
+      color: var(--secondary-dark);
     }
   }
 
   tbody {
     tr {
-      border-bottom: 1px solid var(--neutral-low);
+      border-bottom: 1px solid var(--neutral-medium);
     }
 
     td {

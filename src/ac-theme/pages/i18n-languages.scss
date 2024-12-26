@@ -1,0 +1,17 @@
+.Languages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+
+  &__tableWrapper {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 8px 0px rgba(0,0,0,0.5);
+    background-color: var(--neutral-lightest);
+  }
+
+}
